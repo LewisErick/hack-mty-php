@@ -1,7 +1,5 @@
-$(function() {
-    var params = {"documents":[{"language": "es","id": "first", "text": "First document"}]
-    };
-
+function analyzeText(language, id, text){
+    var params = {"documents":[{"language": language, "id": id, "text": text}]};
     $.ajax({
             url: "https://westus.api.cognitive.microsoft.com/text/analytics/v2.0/sentiment?" + $.param(params),
             beforeSend: function(xhrObj){
@@ -11,7 +9,7 @@ $(function() {
             },
             type: "POST",
             // Request body
-            data: '{"documents":[{"language": "es","id": "first", "text": "First document"}]}'
+            data: JSON.stringify(params)
         })
         .done(function(data) {
             alert("success");
@@ -19,4 +17,4 @@ $(function() {
         .fail(function() {
             alert("error");
         });
-});
+}

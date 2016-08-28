@@ -53,7 +53,8 @@
     
 
 </body>
-<script type="text/javascript" src="assets/js/emotionAnalytics.js"
+<script type="text/javascript" src="assets/js/emotionAnalytics.js"></script>
+<script type="text/javascript" src="assets/js/textAnalytics.js"></script>
 <?php
 require 'footer.php';
 ?>

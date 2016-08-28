@@ -13,4 +13,4 @@ for (var i = 0; i < descripciones.length; i++){
     }
 }   
 
-analyzeEmotion("http://www.purethoughts.net/wp-content/uploads/2015/11/Happy-Boy.jpg");
+analyzeText("es", "answer", "Prueba para saber si funciona. Feliz");
