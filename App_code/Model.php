@@ -17,15 +17,15 @@ class Model
         //$passCrypt = $encrypt->encryptPassword($pass);
         $passCrypt = $pass;
         //$passCrypt = crypt($pass,'$%DM&k6eE@&*');
-        //echo $passCrypt;
+        echo $passCrypt;
         $conn = $mysql->start_connection();
         $query = "SELECT * FROM cliente WHERE email= '$user'";
         if ($stmnt = $conn->query($query)) {
             if ($row = $stmnt->fetch_assoc()) {
                 
-                if ($encrypt->decryptPassword($row['password']) === $pass)
+                if (/*$encrypt->decryptPassword(*/$row['password']/*)*/ === $pass)
                 {
-                    $session->createSession($row['id'], $user, $passCrypt);
+                    $session->createSession($row['email'], $user, $passCrypt);
                     return true;
                 }
                 else{
