@@ -17,7 +17,7 @@ if(isset($_POST['Login']))
         header("Location: user_login.php?error=true");
     }
 }
-if(isset($_POST['logout']))
+if(isset($_GET['logout']))
 {
     $Controller -> Logout();
     header("Location: ../index.html");
