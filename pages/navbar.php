@@ -1,5 +1,5 @@
 <?php
-requiere('stack.php');
+require('stack.php');
 $stack = new Stack();
 
 ?>
