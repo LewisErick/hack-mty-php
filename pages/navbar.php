@@ -42,5 +42,5 @@
 	    </nav>
 	  </div>
 	</div>
-	<div class="well"></div>
+
     
