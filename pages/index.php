@@ -7,37 +7,9 @@
       <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
     <![endif]-->
 </head>
+
 	
-	<div class="container">
-	<div class="col-md-12">
-	    <nav class="navbar navbar-default navbar-fixed-top" style="margin-bottom: 0">
-	        <div class="container">
-	          <!-- Brand and toggle get grouped for better mobile display -->
-	          	<div class="navbar-header">
-	            	<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-collapse">
-	              		<span class="sr-only">Toggle navigation</span>
-	              		<span class="icon-bar"></span>
-	              		<span class="icon-bar"></span>
-	              		<span class="icon-bar"></span>
-	            	</button>
-	            	<span class="navbar-brand" href=""><img src="" alt=""></i>&nbsp;<b style="color:#F2720A">TOUR</b><b style="color:#41CC25">LINE</b></span>
-	          	</div>
-	          	<!-- Collect the nav links, forms, and other content for toggling -->
-	          	<div class="collapse navbar-collapse" id="navbar-collapse">
-	            	<ul class="nav navbar-nav navbar-right nav nav-pills" id="nav">
-	              		<li><a href="#home">Inicio</a></li>
-	                	<li><a href="user_login.php">Registrarse</a></li>
-	                	<li class="user_login.php"><a>Inicio de Sesión</a><li>
-	            	</ul>
-	          	</div><!-- /.navbar-collapse -->
-	        </div><!-- /.container-fluid -->
-	    </nav>
-	  </div>
-	</div>
-	</div>
-	<div class="well"></div>
-	
-<body>
+<body style="padding-top: 75px">
 	<div style="height:330px;">
 		<div id="myCarousel" class="carousel slide" data-ride="carousel">
 	        <!-- Carousel indicators -->
@@ -75,27 +47,34 @@
 				<div class="col-md-12">
 					<h3>Busca atracciones en tu ciudad:</h3>
 				</div>
+					<form method="POST" action="search.php">
 					<div class="form-group">
 						<div class="col-md-3">
 							<h4>Categorias</h4>
-							<select class="form-control">
-								<option>Categorias</option>
-								<option></option>
+							<select name="category" class="form-control">
+								<!-- Comida/Lugares turísticos/Convenciones/Museos/Lugares donde pasear/Actividades -->
+								<option value="comida">Comida</option>
+								<option value="lugares">Lugares turísticos</option>
+								<option value="convenciones">Convenciones</option>
+								<option value="museos">Museos</option>
+								<option value="paseos">Lugares donde pasear</option>
+								<option value="actividades">Actividades</option>
 							</select>
 						</div>
 						<div class="col-md-3">
 							<h4>Dinero</h4>
-							<input type="number" placeholder="Dinero" id="dinero" class="form-control">
+							<input type="number" name="dinero" placeholder="Dinero" id="dinero" class="form-control">
 						</div>
 						<div class="col-md-3">
 							<h4>Tiempo Libre</h4>
-							<input type="datetime" name="" placeholder="Tiempo Libre" class="form-control">
+							<input type="datetime" name="tiempo" placeholder="Tiempo Libre" class="form-control">
 						</div>
 						<div class="col-md-3">
 						<br/><br/>
 							<input class="btn btn-default" value="Buscar" type="submit" id="submit">
 						</div>
 					</div>
+					</form>
 				</div>
 				</div>
 			</div>
