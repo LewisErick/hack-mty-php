@@ -64,7 +64,7 @@
         });
     </script>
 </body>
-
+<script type="text/javascript" src="assets/js/emotionAnalytics.js"
 <?php
 require 'footer.php';
 ?>
