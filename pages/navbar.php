@@ -1,6 +1,12 @@
 <?php
-require('stack.php');
+require 'stack.php';
 $stack = new Stack();
+session_start();
+$nombre = null;
+if(isset($_SESSION["id"]))
+{
+    $nombre = $_SESSION['id'];
+}
 
 ?>
 <!DOCTYPE html>
@@ -41,14 +47,12 @@ $stack = new Stack();
                     <ul class="nav navbar-nav navbar-right nav nav-pills" id="nav">
                         <li><a href="#home">Inicio</a></li>
                         <?php
-                        if ($stack->isLogged()) {
-                            $usuario = $stack->getUsuarioActual();
-                            $nombre = $usuario['nombre'];
+                        if ($nombre != null) {
                             echo "<li><a href='#multimedia'>$nombre</a></li>";
                             echo "<li><a href='stack.php?logout=1'>Logout</a></li>";
                         } else {
-                            echo "<li class=\"active\"><a href='user_login.php'>Registro</a><li>
-									<li class=\"active\"><a href='user_login.php'>Inicio de Sesión</a><li>";
+                            echo "<li><a href='user_login.php'>Registro</a><li>
+									<li><a href='user_login.php'>Inicio de Sesión</a><li>";
                         }
 
                         ?>

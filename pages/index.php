@@ -62,7 +62,7 @@
 							</select>
 						</div>
 						<div class="col-md-3">
-							<h4>Dinero</h4>
+							<h4>Presupuesto</h4>
 							<input type="number" name="dinero" placeholder="Dinero" id="dinero" class="form-control">
 						</div>
 						<div class="col-md-3">
