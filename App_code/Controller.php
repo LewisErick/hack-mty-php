@@ -20,7 +20,7 @@ Class Controller
 	function getBusqueda($category, $dinero, $tiempo)
 	{
 		$model = new Model();
-		$sql = "SELECT * FROM raitable WHERE category = " . $category . "AND dinero <= " . ($dinero + 50) . "ORDER BY promedio DESC";
+		$sql = "SELECT * FROM raitable WHERE category = " . $category . " AND dinero <= " . ($dinero + 50) . "ORDER BY promedio DESC";
 		return $model -> doSelectAll($sql);
 	}
 	function updateImage($email, $file, $file_tmp, $folder, $event, $id, $tabla)

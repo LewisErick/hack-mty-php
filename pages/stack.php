@@ -36,7 +36,7 @@ if(isset($_POST['Register']))
     //$category = isset($_POST["category"]) ? $_POST["category"] : "";
     if($email == "")
     {
-        $status = $Controller -> crearNoticia($email, $nombre,$date,$ciudad,$pais, $password);
+        $status = $Controller -> crearUsuarios($email, $nombre,$date,$ciudad,$pais, $password);
         if($status === true)
         {
             header("Location: index.php");

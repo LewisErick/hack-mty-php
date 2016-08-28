@@ -6,6 +6,7 @@
  * Time: 11:52 AM
  */
 //if they DID upload a file...
+require ("../App_code/Controller.php");
 if($_FILES['photo']['name'])
 {
     $Controller = new Controller();
@@ -19,7 +20,7 @@ if($_FILES['photo']['name'])
             //move it to where we want it to be
             move_uploaded_file($_FILES['photo']['tmp_name'], 'pages/assets/img/'.$new_file_name);
             $message = 'Congratulations!  Your file was accepted.';
-        start_session();
+        session_start();
         $email = $_SESSION['user'];
         $Controller ->updateImage($email, $Pfile, $Pfile_tmp, "img", $email, "", "");
 
@@ -32,10 +33,12 @@ if($_FILES['photo']['name'])
     }
 }
 $message = $_FILES['photo']['tmp_name'];
-var_dump($message);
 
 //you get the following information for each file:
 $_FILES['field_name']['name'];
 $_FILES['field_name']['size'];
 $_FILES['field_name']['type'];
 $_FILES['field_name']['tmp_name'];
+
+header("Location: detalles.php");
+die();

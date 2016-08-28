@@ -30,7 +30,7 @@
                         Subir emoción<input type="file" name="photo" size="25" />
                         <input id="subeImagen" name="Upload" type="Submit" value="Subir">
                     </form>
-                    <button id="comentar" onclick="" class="btn btn-default"><span class="glyphicon glyphicon-comment" aria-hidden="true"></span> Escribir comentario</button>
+                    <button id="comentar" onclick="document.getElementById('HacerComment').style.visibility = 'visible';" class="btn btn-default"><span class="glyphicon glyphicon-comment" aria-hidden="true"></span> Escribir comentario</button>
                     <div class="col-md-4" id="rateYo"></div>
                     <div class="col-md-10"><p style="font-size:20px;">4.8</p></div>
                 </div>
@@ -50,7 +50,7 @@
                     <div class="col-md-10">
                         <textarea id="Comentar" class="form-control" rows="3" style="width:100%"></textarea>
                     </div>
-                    <div class="col-md-2"><button class="btn btn-default">Comentar</button></div>
+                    <div id="comentario" class="col-md-2" onclick="document.getElementById('HacerComment').style.visibility = 'hidden'; alert('Comentario enviado');document.getElementById('Comentar').value = '';"><button class="btn btn-default">Comentar</button></div>
                 </div>
             </div>
         </div>
