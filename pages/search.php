@@ -98,6 +98,7 @@ require 'navbar.php';
 <script src="assets/bootstrap/js/bootstrap.min.js"></script>
 <script type="text/javascript" src="assets/js/user_login.js"></script>
 <script type="text/javascript" src="assets/js/search.js"></script>
+
 <!-- ///  plugins  /// -->
 
 

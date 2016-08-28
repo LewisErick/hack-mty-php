@@ -1,3 +1,4 @@
+/*
 $(function() {
     var params = {"url":"http://www.purethoughts.net/wp-content/uploads/2015/11/Happy-Boy.jpg"};
 
@@ -18,7 +19,7 @@ $(function() {
         .fail(function() {
             alert("error");
         });
-});
+}); */
 
 function analyzeEmotion(url){
     var params = {"url":url};
