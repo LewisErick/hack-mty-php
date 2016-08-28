@@ -7,8 +7,9 @@ class Image
             //echo "The file ". basename($file_name). " has been uploaded.";
             $model = new Model();
             $ffile = $event.$id.'.'.$ext;
-            $query = "UPDATE $tabla SET $campo='$ffile' WHERE id='$id'";
-            return $model -> doUpdate_or_Create($query);
+            //$query = "UPDATE $tabla SET $campo='$ffile' WHERE id='$id'";
+            //return $model -> doUpdate_or_Create($query);
+            return true;
         } else {
             return false;
         }

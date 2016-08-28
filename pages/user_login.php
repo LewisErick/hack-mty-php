@@ -93,7 +93,7 @@
         </form>
         <div class="col-md-12 alert alert-danger" id="errormsg" hidden></div>
     </div>
-    <script type="text/javascript" scr="assets/js/validate.js"></script>
+    <script type="text/javascript" src="assets/js/validate.js"></script>
 
     <script>(function(d, s, id) {
         var js, fjs = d.getElementsByTagName(s)[0];

@@ -87,7 +87,7 @@ require 'navbar.php';
                             ipsum dolor
                         </div>
                         <div class="col-md-12" align="right">
-                            <a id="mas" href="" class="btn btn-info">Ver más</a>
+                            <a id="mas" href="detalles.php" class="btn btn-info">Ver más</a>
                         </div>
                     </div>
                 </div>
