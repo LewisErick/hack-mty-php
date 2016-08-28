@@ -22,46 +22,29 @@ if(isset($_GET['logout']))
     $Controller -> Logout();
     header("Location: ../index.html");
 }
-if(isset($_POST['guardarNoticia']))
+if(isset($_POST['Register']))
 {
-    $id = isset($_POST["id"]) ? $_POST['id'] : "";
-    $title = isset($_POST["title"]) ? $_POST["title"] : "";
+    $email = isset($_POST["email"]) ? $_POST['email'] : "";
+    $nombre = isset($_POST["nombre"]) ? $_POST["nombre"] : "";
+    $password = isset($_POST["password"]) ? $_POST["password"] : "";
+    $ciudad = isset($_POST["ciudad"]) ? $_POST["ciudad"] : "";
+    $pais = isset($_POST["pais"]) ? $_POST["pais"] : "";
     $date = isset($_POST["date"]) ? $_POST["date"] : "";
-    $textP1 = isset($_POST["textP1"]) ? $_POST["textP1"] : "";
-    $Pfile = isset($_FILES["image"]["name"])? $_FILES["image"]["name"] : "";
-    $Pfile_tmp = isset($_FILES["image"]["tmp_name"])? $_FILES["image"]["tmp_name"] : "";
     //$image = isset($_POST["image"]) ? $_POST["image"] : "";
     //$author = isset($_POST["author"]) ? $_POST["author"] : "";
     //$category = isset($_POST["category"]) ? $_POST["category"] : "";
-    if($id == "")
+    if($email == "")
     {
-        $status = $Controller -> crearNoticia($title, $date, $textP1, $Pfile, $Pfile_tmp, "noticias");
+        $status = $Controller -> crearNoticia($email, $nombre,$date,$ciudad,$pais, $password);
         if($status === true)
         {
-            header("Location: noticias.php");
+            header("Location: index.php");
         }
         else if($status === false)
-            header("Location: noticiasnew.php?error=true");
-        //echo '$status';
-        else
-            //echo '$status';
-            header("Location: noticiasnew.php?error=image&id=$status");
+            header("Location: user_login.php?error=true");
     }
     else
-    {
-        if (isset($_POST["eliminar"]) && $_POST["eliminar"] == 1) {
-            if ($Controller -> borrarNoticia($id, "noticias"))
-            {
-                header("Location: noticias.php");
-            }
-        }
-        else if($Controller -> actualizarNoticia($id, $title, $date, $textP1, $Pfile, $Pfile_tmp, "noticias"))
-        {
-            header("Location: noticiasnew.php?id=$id");
-        }
-        else
-            header("Location: noticiasnew.php?error=true");
-    }
+        header("Location: user_login.php?error=campos");
 }
 if(isset($_POST['guardarNoticiaCSED']))
 {
