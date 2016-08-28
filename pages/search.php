@@ -91,6 +91,16 @@ require 'navbar.php';
 </div>
 </body>
 
+<!--
+
+
+<script type="text/javascript" src="assets/js/textAnalytics.js"></script>
+<script type="text/javascript" src="assets/js/emotionAnalytics.js"></script>
+
+<script type="text/javascript">
+    analyzeEmotion("http://2d0yaz2jiom3c6vy7e7e5svk.wpengine.netdna-cdn.com/wp-content/uploads/2015/12/trump_mug.jpg");
+    analyzeText("es", "ans","Sentimiento de este texto");
+</script> -->
 
 <script type="text/javascript" src="https://code.jquery.com/jquery-3.1.0.min.js"></script>
 <script src='http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>

@@ -6,13 +6,14 @@
 <!-- Latest compiled and minified CSS -->
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/rateYo/2.2.0/jquery.rateyo.min.css">
 
+<!--
 <div style="position: fixed; z-index: 100; width: 200px; height: 80px; margin: 0 auto; height: 150px;">
     <form enctype="multipart/form-data">
         <input type="file" class="input-field" id="photo" name="photo">
         <button id="img-button">Subir</button>
     </form>
 </div>
-
+-->
     <div class="container">
         <div class="well">
             <div class="row">
@@ -24,8 +25,11 @@
                     <h2 id="lugar">Instituto Tecnológico y de Estudios Superiores de Monterrey</h2>
                     <h3>$0 MXN</h3> <br/>
                     <label id="direccion">Ave. Eugenio Garza Sada 2501 Sur Col. Tecnológico, 64849 Monterrey, Nuevo León</label><br/><br>
-                    <button id="foto_grade" onclick="" class="btn btn-default">
-                    <span class="glyphicon glyphicon-camera" aria-hidden="true"></span> Subir Emoción</button>
+
+                    <form action="check_file.php" method="post" enctype="multipart/form-data">
+                        Subir emoción<input type="file" name="photo" size="25" />
+                        <input id="subeImagen" name="Upload" type="Submit" value="Subir">
+                    </form>
                     <button id="comentar" onclick="" class="btn btn-default"><span class="glyphicon glyphicon-comment" aria-hidden="true"></span> Escribir comentario</button>
                     <div class="col-md-4" id="rateYo"></div>
                     <div class="col-md-10"><p style="font-size:20px;">4.8</p></div>
