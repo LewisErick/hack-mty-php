@@ -4,6 +4,7 @@ require '../App_code/View.php';
 $Controller = new Controller();
 if(isset($_POST['Login']))
 {
+
     $user = $_POST['email'];
     $pass = $_POST['password'];
     if($Controller -> Login($user, $pass))
@@ -13,7 +14,7 @@ if(isset($_POST['Login']))
     else
     {
         //json_encode("Error usuario o password incorrecto");
-        header("Location: login.php?error=true");
+        header("Location: user_login.php?error=true");
     }
 }
 if(isset($_POST['logout']))
