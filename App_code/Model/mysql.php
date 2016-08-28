@@ -5,10 +5,10 @@ class MySql
 	function start_connection()
 	{
 		
-		$host = "localhost:3306";
-	    $username = "root"; //Mysql username
-	    $password = ""; // Mysql password
-	    $db_name = "tourline"; // Database name
+		$host = "db644900389.db.1and1.com";
+	    $username = "dbo644900389"; //Mysql username
+	    $password = "hackmty2016"; // Mysql password
+	    $db_name = "db644900389"; // Database name
 	    $conn = new mysqli("$host", "$username", "$password", "$db_name");
 	    
 
