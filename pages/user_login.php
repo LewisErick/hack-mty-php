@@ -82,6 +82,9 @@
                 <input type="text" name="ciudad" placeholder="Ciudad"/>
             </div>
             <div class="u-form-group">
+                <input type="text" name="pais" placeholder="País"/>
+            </div>
+            <div class="u-form-group">
                 <input type="date" name="date" placeholder="Fecha"/>
             </div>
             <div class="u-form-group">

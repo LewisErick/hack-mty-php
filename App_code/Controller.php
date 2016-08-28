@@ -32,6 +32,11 @@ Class Controller
 		$user = new User();
 		return $user -> createUser($username, $password, $rol);
 	}
+	function crearUsuarios($email, $nombre, $date, $ciudad, $pais, $pass)
+	{
+		$user = new User();
+		return $user -> createUserView($email, $nombre, $date, $ciudad, $pais, $pass);
+	}
 	function actualizarAdministrador($id, $username, $password)
 	{
 		$user = new User();
