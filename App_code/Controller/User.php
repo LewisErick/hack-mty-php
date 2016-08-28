@@ -1,16 +1,36 @@
 <?php
 class User
 {
-    function createUser($username, $password, $rol)
+    function createUser($username, $password)
     {
         $encrypt = new Encrypt();
 
-        $myCripPassword = $encrypt -> encryptPassword($password);
+        //$myCripPassword = $encrypt -> encryptPassword($password);
+        $myCripPassword = $password;
         $model = new Model();
-        $sql = "SELECT * FROM user WHERE username = '$username'";
+        $sql = "SELECT * FROM administradores WHERE email = '$username'";
         $aux = $model -> doSelectAll($sql);
         if($aux -> num_rows <= 0){
-            $sql = "INSERT INTO user (username, password, rol) VALUES ('$username','$myCripPassword','0')";
+            $sql = "INSERT INTO user (username, password) VALUES ('$username','$myCripPassword')";
+            if ($model -> doUpdate_or_Create($sql))
+                return "";
+            else
+                return "db";
+        }
+        else
+            return "existe";
+    }
+    function createUserVisit($email, $nombre, $date, $ciudad, $pais, $pass)
+    {
+         $encrypt = new Encrypt();
+
+        //$myCripPassword = $encrypt -> encryptPassword($password);
+        $myCripPassword = $password;
+        $model = new Model();
+        $sql = "SELECT * FROM cliente WHERE email = '$email'";
+        $aux = $model -> doSelectAll($sql);
+        if($aux -> num_rows <= 0){
+            $sql = "INSERT INTO cliente (email, nombre, fechaNacimiento, ciudad, pais, password) VALUES ('$email','$nombre','$date','$ciudad','$pais','$pass')";
             if ($model -> doUpdate_or_Create($sql))
                 return "";
             else
