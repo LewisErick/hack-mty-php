@@ -8,7 +8,8 @@
 
 <div style="position: fixed; z-index: 100; width: 200px; height: 80px; margin: 0 auto; height: 150px;">
     <form enctype="multipart/form-data">
-        <input type="image" id="emotion-face" name="emotion-face">
+        <input type="file" class="input-field" id="photo" name="photo">
+        <button id="img-button">Subir</button>
     </form>
 </div>
 
@@ -51,7 +52,17 @@
         </div>
     </div>
     
+    <script type="text/javascript">
+        $("#img-button").click(function() {
+            var data=new FormData();
+            //from inputs
+            data.append(photo.name,photo.files[0]);
 
+            var xmlhttp=new XMLHttpRequest();
+            xmlhttp.open("POST", "imganalyze.php");
+            xmlhttp.send(data);
+        });
+    </script>
 </body>
 
 <?php
