@@ -13,3 +13,4 @@ for (var i = 0; i < descripciones.length; i++){
     }
 }   
 
+analyzeText("es", "answer", "Prueba para saber si funciona. Feliz");

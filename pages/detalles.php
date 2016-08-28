@@ -6,6 +6,13 @@
 <!-- Latest compiled and minified CSS -->
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/rateYo/2.2.0/jquery.rateyo.min.css">
 
+<div style="position: fixed; z-index: 100; width: 200px; height: 80px; margin: 0 auto; height: 150px;">
+    <form enctype="multipart/form-data">
+        <input type="file" class="input-field" id="photo" name="photo">
+        <button id="img-button">Subir</button>
+    </form>
+</div>
+
     <div class="container">
         <div class="well">
             <div class="row">
@@ -45,9 +52,20 @@
         </div>
     </div>
     
+    <script type="text/javascript">
+        $("#img-button").click(function() {
+            var data=new FormData();
+            //from inputs
+            data.append(photo.name,photo.files[0]);
 
+            var xmlhttp=new XMLHttpRequest();
+            xmlhttp.open("POST", "imganalyze.php");
+            xmlhttp.send(data);
+        });
+    </script>
 </body>
-
+<script type="text/javascript" src="assets/js/emotionAnalytics.js"></script>
+<script type="text/javascript" src="assets/js/textAnalytics.js"></script>
 <?php
 require 'footer.php';
 ?>
