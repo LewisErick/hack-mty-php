@@ -19,7 +19,7 @@ require 'navbar.php';
         </div>
     </div>
     <div id="products" class="row list-group">
-        <div class="item  col-xs-4 col-lg-4" onclick="location.href='#';" style="cursor: pointer;">
+        <div class="item  col-xs-4 col-lg-4" onclick="location.href='registro_lugar.php';" style="cursor: pointer;">
             <div class="thumbnail">
                 <img class="group list-group-image" style='height: 250px; width: 100%; object-fit: contain'
                      src="http://www.polarpuffs-cakes.com/themes/polar/images/googlemap.png" alt=""/>
@@ -32,7 +32,7 @@ require 'navbar.php';
                 </div>
             </div>
         </div>
-        <div class="item  col-xs-4 col-lg-4" onclick="location.href='#';" style="cursor: pointer;">
+        <div class="item  col-xs-4 col-lg-4" onclick="location.href='registro_promo.php';" style="cursor: pointer;">
             <div class="thumbnail">
                 <img class="group list-group-image" style='height: 250px; width: 100%; object-fit: contain'
                      src="https://cdn2.iconfinder.com/data/icons/ecommerce-solid-icons-vol-2/64/088-512.png" alt=""/>
