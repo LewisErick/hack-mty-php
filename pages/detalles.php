@@ -2,44 +2,7 @@
     require 'navbar.php';
 ?>
 
-
-<!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
-    <!--[if lt IE 9]>
-      <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
-      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
-    <![endif]-->
-</head>
-    
-<div class="container">
-    <div class="col-md-12">
-        <nav class="navbar navbar-default navbar-fixed-top" role="navigation" style="margin-bottom: 0">
-            <div class="container">
-              <!-- Brand and toggle get grouped for better mobile display -->
-                <div class="navbar-header">
-                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-collapse">
-                        <span class="sr-only">Toggle navigation</span>
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                    </button>
-                    <span class="navbar-brand" href=""><img src="" alt=""></i>&nbsp;<b style="color:#F2720A">TOUR</b><b style="color:#41CC25">LINE</b></span>
-                </div>
-                <!-- Collect the nav links, forms, and other content for toggling -->
-                <div class="collapse navbar-collapse" id="navbar-collapse">
-                    <ul class="nav navbar-nav navbar-right nav nav-pills" id="nav">
-                        <li><a href="#home">Inicio</a></li>
-                        <li><a href="#multimedia">Registrarse</a></li>
-                        <li class="active"><a>Inicio de Sesión</a><li>
-                    </ul>
-                </div><!-- /.navbar-collapse -->
-            </div><!-- /.container-fluid -->
-        </nav>
-      </div>
-</div>
-<div class="well"></div>
-
-
-<body>
+<body style="padding-top: 75px">
 <!-- Latest compiled and minified CSS -->
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/rateYo/2.2.0/jquery.rateyo.min.css">
 
@@ -82,25 +45,9 @@
         </div>
     </div>
     
-   
-    
 
 </body>
 
-
-<!-- ///  begin footer  /// -->
-<div class="col-md-12" style=" position:fixed; bottom:0; padding: 0">
-    <footer>
-        <div class="container">
-            <div class="row">
-                <div class="col-sm-12 text-left">
-                    <span style="color:white;">Página Web desarrollada por: <a href="" style="color: white;">Omar García</a>, <a href="" style="color: white;">Luis Martínez</a>, <a href="" style="color:white;">Ali Ghahraei</a >, <a href="" style="color: white;">Erick Lewis</a></span>
-                </div>
-            </div>
-        </div>
-    </footer>
-
-</div>
 <?php
 require 'footer.php';
 ?>
