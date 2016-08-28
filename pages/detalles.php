@@ -6,6 +6,12 @@
 <!-- Latest compiled and minified CSS -->
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/rateYo/2.2.0/jquery.rateyo.min.css">
 
+<div style="position: fixed; z-index: 100; width: 200px; height: 80px; margin: 0 auto; height: 150px;">
+    <form enctype="multipart/form-data">
+        <input type="image" id="emotion-face" name="emotion-face">
+    </form>
+</div>
+
     <div class="container">
         <div class="well">
             <div class="row">
