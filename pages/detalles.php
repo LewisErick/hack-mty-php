@@ -37,7 +37,7 @@
                     <label for="comment"> Agregar comentario: </label>
                     </div>
                     <div class="col-md-10">
-                        <textarea id="Comentar" class="form-control" rows="4" style="width:100%"></textarea>
+                        <textarea id="Comentar" class="form-control" rows="3" style="width:100%"></textarea>
                     </div>
                     <div class="col-md-2"><button class="btn btn-default">Comentar</button></div>
                 </div>
