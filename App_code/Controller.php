@@ -17,6 +17,12 @@ Class Controller
 		$model = new Model();
 		return ($model -> close_Session());
 	}
+	function getBusqueda($category, $dinero, $tiempo)
+	{
+		$model = new Model();
+		$sql = "SELECT * FROM raitable WHERE category = " . $category . "AND dinero <= " . ($dinero + 50) . "ORDER BY promedio DESC";
+		return $model -> doSelectAll($sql);
+	}
 	function updateImage($email, $file, $file_tmp, $folder, $event, $id, $tabla)
 	{
 		$Image = new Image();

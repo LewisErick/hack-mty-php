@@ -25,6 +25,11 @@ require 'navbar.php';
 <body>
 <div class="container">
     <div class="col-lg-12" style="padding: 75px" >
+    <?php
+        $stack = new Stack();
+        $stmnt = $stack -> getBusqueda($category, $dinero, $tiempo);
+        while($row = mysql_fetch_assoc($stmnt)) {
+        echo '
         <div class="col-md-5 no-padding lib-item" data-category="view">
             <div class="lib-panel">
                 <div class="row box-shadow">
@@ -32,28 +37,29 @@ require 'navbar.php';
                         <img class="lib-img-show" src="https://mediawen.com/img/customers/img.jpg">
                     </div>
                     <div class="col-md-6">
-                        <div class="lib-row lib-header title">
-                            Example library
+                            <div class="lib-row lib-header title">
+                                        '.$row["nombre"].'
                             <div class="lib-header-seperator"></div>
-                        </div>
-                        <div class="lib-row lib-header price" style="font-size: 12px; padding-top: 0; font-weight: bold">
-                            $100
-                        </div>
-                        <div class="lib-row lib-header address" style="font-size: 12px; padding-top: 5px;">
-                            Address
+                            </div>
+                            <div class="lib-row lib-header price" style="font-size: 12px; padding-top: 0; font-weight: bold">
+                                        '.$row["dinero"].'
+                            </div>
+                            <div class="lib-row lib-header address" style="font-size: 12px; padding-top: 5px;">
+                                        Address
                             <div class="lib-header-seperator"></div>
-                        </div>
-                        <div class="lib-row lib-desc descp">
-                            Lorem ipsum dolor Lorem ipsum dolor Lorem ipsum dolor Lorem ipsum dolor Lorem ipsum dolor Lorem
-                            ipsum dolor
-                        </div>
-                        <div class="col-md-12" align="right">
+                            </div>
+                            <div class="lib-row lib-desc descp">
+                                '.$row["descripcion"].'
+                            </div>
+                            <div class="col-md-12" align="right">
                             <a id="mas" href="" class="btn btn-info">Ver más</a>
                         </div>
                     </div>
                 </div>
             </div>
-        </div>
+        </div>';
+        }
+    ?>
 
         <div class="col-md-1">
         </div>
@@ -91,57 +97,7 @@ require 'navbar.php';
 </div>
 </body>
 
-<?php
-// This sample uses the Apache HTTP client from HTTP Components (http://hc.apache.org/httpcomponents-client-ga/)
-require_once 'HTTP/Request2.php';
 
-$request = new Http_Request2('https://westus.api.cognitive.microsoft.com/text/analytics/v2.0/sentiment');
-$url = $request->getUrl();
-
-$headers = array(
-    // Request headers
-    'Content-Type' => 'application/json',
-    'Ocp-Apim-Subscription-Key' => '71b1bd4b20204550b93f424b11d9bc0c',
-);
-
-$request->setHeader($headers);
-
-$parameters = array(
-    // Request parameters
-);
-
-$url->setQueryVariables($parameters);
-
-$request->setMethod(HTTP_Request2::METHOD_POST);
-
-// Request body
-$request->setBody("{
-    \"documents\": [
-        {
-            \"language\": \"en\",
-            \"id\": \"1\",
-            \"text\": \"First document\"
-        },
-        ...
-        {
-            \"language\": \"en\",
-            \"id\": \"100\",
-            \"text\": \"Final document\"
-        }
-    ]
-}");
-
-try
-{
-    $response = $request->send();
-    echo $response->getBody();
-}
-catch (HttpException $ex)
-{
-    echo $ex;
-}
-
-?>
 
 
 

@@ -7,6 +7,7 @@ if(isset($_POST['Login']))
 
     $user = $_POST['email'];
     $pass = $_POST['password'];
+    //echo $user.' '.$pass;
     if($Controller -> Login($user, $pass))
     {
         header("Location: index.php");
@@ -257,6 +258,11 @@ class Stack
     {
         $View = new View();
         return $View -> haveSession();
+    }
+    function getBusqueda($category, $dinero, $tiempo)
+    {
+        $Controller = new Controller();
+        return $Controller -> getBusqueda($category, $dinero, $tiempo);
     }
 }
 ?>

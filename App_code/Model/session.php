@@ -5,8 +5,8 @@ class Session
 	{
 		session_start();
 		$_SESSION['id'] = $id;
-		$_SESSION["user"] = "$user";
-		$_SESSION["password"] = "$myCripPassword";
+		$_SESSION["user"] = $user;
+		$_SESSION["password"] = $myCripPassword;
 		$_SESSION['login'] = "true";
 	}
 	function deleteSession()

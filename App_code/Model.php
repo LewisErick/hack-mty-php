@@ -17,7 +17,7 @@ class Model
         //$passCrypt = $encrypt->encryptPassword($pass);
         $passCrypt = $pass;
         //$passCrypt = crypt($pass,'$%DM&k6eE@&*');
-        echo $passCrypt;
+        //echo $passCrypt;
         $conn = $mysql->start_connection();
         $query = "SELECT * FROM cliente WHERE email= '$user'";
         if ($stmnt = $conn->query($query)) {
@@ -25,7 +25,7 @@ class Model
                 
                 if (/*$encrypt->decryptPassword(*/$row['password']/*)*/ === $pass)
                 {
-                    $session->createSession($row['email'], $user, $passCrypt);
+                    $session->createSession($row['nombre'], $user, $passCrypt);
                     return true;
                 }
                 else{
