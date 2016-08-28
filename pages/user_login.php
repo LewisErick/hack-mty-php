@@ -52,13 +52,13 @@
         <!-- Login -->
         <form class="email-login" method="POST" action="stack.php">
             <div class="u-form-group">
-                <input type="text" id="email" placeholder="Email"/>
+                <input type="text" id="email" name="email" placeholder="Email"/>
             </div>
             <div class="u-form-group">
-                <input type="password" id="password" placeholder="Contraseña"/>
+                <input type="password" id="password" name="password" placeholder="Contraseña"/>
             </div >
             <div class="u-form-group">
-                <input type="Submit" value="Iniciar Sesión" id="Login">
+                <input type="Submit" id="Login" value="Iniciar Sesión" name="Login" name="Login">
             </div>
             <div class="u-form-group">
                 <a href="#" class="forgot-password">Olvide mi contraseña</a>
@@ -67,25 +67,25 @@
         <!-- Sign Up -->
         <form class="email-signup" method="POST" action="stack.php">
             <div class="u-form-group">
-                <input type="email" id="email" placeholder="Email"/>
+                <input type="email" id="email" name="email" placeholder="Email"/>
             </div>
             <div class="u-form-group">
-                <input type="text" id="newuser" placeholder="Nombre Completo"/>
+                <input type="text" id="newuser" name="newuser" placeholder="Nombre Completo"/>
             </div>
             <div class="u-form-group">
-                <input type="password" id="password" placeholder="Contraseña"/>
+                <input type="password" id="password" name="password" placeholder="Contraseña"/>
             </div>
             <div class="u-form-group">
-                <input type="password" id="cpass" placeholder="Confirmar contraseña"/>
+                <input type="password" id="cpass" name="cpass" placeholder="Confirmar contraseña"/>
             </div>
             <div class="u-form-group">
-                <input type="text" id="ciudad" placeholder="Ciudad"/>
+                <input type="text" name="ciudad" placeholder="Ciudad"/>
             </div>
             <div class="u-form-group">
-                <input type="date" id="date" placeholder="Fecha"/>
+                <input type="date" name="date" placeholder="Fecha"/>
             </div>
             <div class="u-form-group">
-                <input id="Register" type="Submit" value="SignUp">
+                <input id="Register" name="Register" type="Submit" value="SignUp">
             </div>
         </form>
         <div class="col-md-12 alert alert-danger" id="errormsg" hidden></div>
